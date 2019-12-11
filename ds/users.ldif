@@ -1,0 +1,269 @@
+dn: ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: untypedObject
+ou: identities
+aci: (targetattr="* || aci")(version 3.0;acl "Allow identity modification";allow (write)(userdn = "ldap:///uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com");)
+aci: (targetattr!="userPassword||authPassword")(version 3.0;acl "Allow identity search"; allow (search, read)(userdn = "ldap:///uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com");)
+aci: (targetattr="+")(version 3.0;acl "Allow identity search operational attributes"; allow (search, read)(userdn = "ldap:///uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com");)
+aci: (version 3.0;acl "Add, delete, proxy identities"; allow (add, delete, proxy)(userdn = "ldap:///uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com");)
+aci: (targetcontrol="2.16.840.1.113730.3.4.3||1.3.6.1.4.1.42.2.27.8.5.1||2.16.840.1.113730.3.4.18")(version 3.0;acl "Allow persistent search, password policy and proxied authz controls"; allow (read)(userdn = "ldap:///uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com");)
+aci: (targetattr = "objectclass || inetuserstatus || iplanet-am-user-login-status || iplanet-am-user-account-life || iplanet-am-session-quota-limit || iplanet-am-user-alias-list ||  iplanet-am-session-max-session-time || iplanet-am-session-max-idle-time || iplanet-am-session-get-valid-sessions || iplanet-am-session-destroy-sessions || iplanet-am-user-admin-start-dn || iplanet-am-auth-post-login-process-class || iplanet-am-user-federation-info || iplanet-am-user-federation-info-key || ds-pwp-account-disabled || sun-fm-saml2-nameid-info || sun-fm-saml2-nameid-infokey || sunAMAuthInvalidAttemptsData || memberof || member || kbaInfoAttempts")(version 3.0; acl "OpenAM User self modification denied for these attributes"; deny (write) userdn ="ldap:///self";)
+aci: (targetcontrol="1.3.6.1.4.1.42.2.27.8.5.1 || 1.3.6.1.4.1.36733.2.1.5.1") (version 3.0; acl "Allow anonymous access to behera draft and transaction control"; allow(read) userdn="ldap:///anyone";)
+aci: (targetattr="userPassword") (version 3.0; acl "Allow password change"; allow (write) userdn="ldap:///self";)
+entryUUID: c5d9e041-9ce5-3a02-9067-a0a938ae6bd1
+modifiersName: uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com
+modifyTimestamp: 20191211181505Z
+
+dn: ou=people,ou=identities,dc=mtservices,dc=com
+objectClass: organizationalunit
+objectClass: top
+ou: people
+entryUUID: 19929d02-a590-3498-8aaa-04e9b62aa158
+
+dn: ou=groups,ou=identities,dc=mtservices,dc=com
+objectClass: organizationalunit
+objectClass: top
+ou: groups
+entryUUID: 3cc5297c-d704-38be-80dd-00a099f1b6e2
+
+dn: ou=admins,ou=identities,dc=mtservices,dc=com
+objectClass: organizationalunit
+objectClass: top
+ou: admins
+entryUUID: 3b51c6a4-32d5-342a-bff3-5ca4f6703060
+
+dn: uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: am-identity-bind-account
+sn: am-identity-bind-account
+uid: am-identity-bind-account
+userPassword: {SSHA512}I0AW8OEMBdu1GW94tzLiSjeAGwtxmvhz9nozJLKQKNbNr8kEjbeH48Nek7ojkRdzFvixA8EDOi2gDQ3Y7cmTmT5FV3N8/ctN
+ds-privilege-name: password-reset
+ds-privilege-name: proxied-auth
+ds-privilege-name: modify-acl
+entryUUID: fe6659f9-9275-3ee9-b5d5-78e5b615df81
+
+dn: o=tenant1,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organization
+o: tenant1
+
+dn: o=tenant2,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organization
+o: tenant2
+
+dn: o=tenant3,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organization
+o: tenant3
+
+dn: o=tenant4,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organization
+o: tenant4
+
+dn: o=tenant5,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organization
+o: tenant5
+
+dn: ou=People,o=tenant1,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=People,o=tenant2,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=People,o=tenant3,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=People,o=tenant4,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=People,o=tenant5,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=680991e9-73c2-486b-8379-8e4b242c71d5,ou=People,o=tenant1,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Bcs
+sn: Beckman
+cn: Bcs Beckman
+initials: BCB
+employeeNumber: user.772
+uid: 680991e9-73c2-486b-8379-8e4b242c71d5
+mail: user.772@tenant1.com
+userPassword: {SSHA512}tw+dkJ+kKoYrp9jfIRXza8ZkfeZhs69G2Z9DAggt5XuAESfMpSG4SA9lFKsRhJQpy/uONxZfW6BBdRxnkouQIIOVinYcSyFI
+telephoneNumber: +1 716 302 4080
+homePhone: +1 901 246 3628
+pager: +1 003 110 7868
+mobile: +1 021 509 1070
+street: 72356 Miller Street
+l: Hattiesburg
+st: IL
+postalCode: 28760
+postalAddress: Bcs Beckman$72356 Miller Street$Hattiesburg, IL  28760
+
+dn: uid=15331cba-f3d2-4a2b-8d47-21a1577c21ca,ou=People,o=tenant1,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Beate
+sn: Bedard
+cn: Beate Bedard
+initials: BFB
+employeeNumber: user.777
+uid: 15331cba-f3d2-4a2b-8d47-21a1577c21ca
+mail: user.777@example.com
+userPassword: {SSHA512}+JYTcvHBx5XHqmBc27cnvlKbWjeAQr1Igp8xf8e/BDhxXMCpDZf9fpg0GCudXcEf0WdiCCCMO4mMUVhZsC1mirZsel5q25/P
+telephoneNumber: +1 809 892 6277
+homePhone: +1 605 665 9910
+pager: +1 040 454 1970
+mobile: +1 980 218 7940
+street: 05856 Hill Street
+l: Des Moines
+st: VT
+postalCode: 75720
+postalAddress: Beate Bedard$05856 Hill Street$Des Moines, VT  75720
+
+dn: uid=296002c1-2b50-40b7-ab84-17e5bd5fd5c5,ou=People,o=tenant2,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Bcspatch
+sn: Beckstead
+cn: Bcspatch Beckstead
+initials: BLB
+employeeNumber: user.773
+uid: 296002c1-2b50-40b7-ab84-17e5bd5fd5c5
+mail: user.773@tenant2.com
+userPassword: {SSHA512}T/kY1L3os2FyvcwdgIceIZmDcKDZ5BcLQbHmW4Ux0Ry0uWErR4g1PNnepfF8IF+3xyR2PTFBlZZKQwlngVRRVMFfPXX4wisO
+telephoneNumber: +1 833 743 1274
+homePhone: +1 209 328 6709
+pager: +1 034 078 2602
+mobile: +1 340 615 6400
+street: 11381 Hillcrest Street
+l: Marquette
+st: MO
+postalCode: 26326
+postalAddress: Bcspatch Beckstead$11381 Hillcrest Street$Marquette, MO  26326
+
+dn: uid=adc58be7-8e4e-462a-b740-b5a1103179b7,ou=People,o=tenant2,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Beate
+sn: Bedard
+cn: Beate Bedard
+initials: BFB
+employeeNumber: user.777
+uid: adc58be7-8e4e-462a-b740-b5a1103179b7
+mail: user.777@example.com
+userPassword: {SSHA512}+JYTcvHBx5XHqmBc27cnvlKbWjeAQr1Igp8xf8e/BDhxXMCpDZf9fpg0GCudXcEf0WdiCCCMO4mMUVhZsC1mirZsel5q25/P
+telephoneNumber: +1 809 892 6277
+homePhone: +1 605 665 9910
+pager: +1 040 454 1970
+mobile: +1 980 218 7940
+street: 05856 Hill Street
+l: Des Moines
+st: VT
+postalCode: 75720
+postalAddress: Beate Bedard$05856 Hill Street$Des Moines, VT  75720
+
+dn: uid=730b06dd-0bb2-461f-9ac1-7ebe57796f00,ou=People,o=tenant3,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Bea
+sn: Beckwith
+cn: Bea Beckwith
+initials: BQB
+employeeNumber: user.774
+uid: 730b06dd-0bb2-461f-9ac1-7ebe57796f00
+mail: user.774@tenant3.com
+userPassword: {SSHA512}ikVB9eQGb6SH2t3gYGOmH85TLfg5FU1Qv6TQ9TZflPA/SxQB5MY8rGx5yVLCP5Yq4cD/t/d9I5JXYGpOCTjQpl5eEktmK/cY
+telephoneNumber: +1 373 259 0813
+homePhone: +1 488 535 6198
+pager: +1 157 013 2857
+mobile: +1 726 163 8010
+street: 63413 Fourth Street
+l: Hartford
+st: CT
+postalCode: 06707
+postalAddress: Bea Beckwith$63413 Fourth Street$Hartford, CT  06707
+
+dn: uid=b2514c1d-0a73-47d4-a427-39633e12c149,ou=People,o=tenant4,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Beana
+sn: Beconovich
+cn: Beana Beconovich
+initials: BVB
+employeeNumber: user.775
+uid: b2514c1d-0a73-47d4-a427-39633e12c149
+mail: user.775@tenant4.com
+userPassword: {SSHA512}yuf1Ox4/EA8GldWeda8jbubg10tCS1xrwOeGH2CG4lCuyslkYMSRxdpM2rf5tA+GoOGFDZ/bPp6fZm+l9dDE3d4W+1c2Vez/
+telephoneNumber: +1 255 751 3162
+homePhone: +1 216 671 6733
+pager: +1 880 622 5539
+mobile: +1 324 841 8430
+street: 92746 Poplar Street
+l: Lubbock
+st: NC
+postalCode: 66258
+postalAddress: Beana Beconovich$92746 Poplar Street$Lubbock, NC  66258
+
+dn: uid=2d4b864c-4053-474a-8099-9edd1b3beb31,ou=People,o=tenant5,ou=identities,dc=mtservices,dc=com
+objectClass: top
+objectClass: inetuser
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+givenName: Beata
+sn: Becquart
+cn: Beata Becquart
+initials: BQB
+employeeNumber: user.776
+uid: 2d4b864c-4053-474a-8099-9edd1b3beb31
+mail: user.776@tenant5.com
+userPassword: {SSHA512}ukgWa+SgQbG4gSsEgrJlcSfSYtHEAj2mF6qsku0vr/6EE1a6yw8XWXOVgzY2zPtCZk6NamZFQEYvxjkwHCKM9MImYf1m+kRC
+telephoneNumber: +1 302 178 8416
+homePhone: +1 964 249 2698
+pager: +1 202 460 6030
+mobile: +1 604 159 9924
+street: 34180 Walnut Street
+l: Houston
+st: WA
+postalCode: 05107
+postalAddress: Beata Becquart$34180 Walnut Street$Houston, WA  05107
+
+
+
+
