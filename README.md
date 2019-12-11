@@ -10,20 +10,9 @@ Pre-requisites :
 ================
 * Versions used for this project: IG 6.5?, AM 6.5.2.2, DS 6.5.2
 
-IG Configuration:
+DS:
 =====================
-* Refer ig folder 
-
-AM Amster export:
-=====================
-* Install AM:
-    ```
-install-openam --serverUrl http://login.mtservices.com:8096/am --adminPwd cangetinam --policyAgentPwd camgetinag --acceptLicense --cfgDir /home/forgerock/am12 --cfgStoreAdminPort 9644 --cfgStoreJmxPort 9689 --cfgStorePort 56969 --cookieDomain mtservices.com --userStoreDirMgr uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com --userStoreDirMgrPwd cangetindj --userStoreHost uds.mtservices.com --userStoreAdminPort 4344 --userStoreType LDAPv3ForOpenDS --userStorePort 4389 --userStoreRootSuffix ou=identities,dc=mtservices,dc=com
-    ```
-* Refer am/amster folder
-
-DS ldif:
-=====================
+* Refer DS configs folder: /ds
 * Install DS user store: 
 ```
 /opt/forgerock/dsus4/setup directory-server \
@@ -38,7 +27,26 @@ DS ldif:
           --set am-identity-store/baseDn:ou=identities,dc=mtservices,dc=com \
           --acceptLicense 
 ```          
-* Refer ds folder
+* Import Sample users
+```
+./import-ldif -h localhost -p 4344 -n amIdentityStore -l users.ldif
+```
+
+AM:
+=====================
+* Refer AM configs folder: /am
+* Install AM:
+    ```
+install-openam --serverUrl http://login.mtservices.com:8096/am --adminPwd cangetinam --policyAgentPwd camgetinag --acceptLicense --cfgDir /home/forgerock/am12 --cfgStoreAdminPort 9644 --cfgStoreJmxPort 9689 --cfgStorePort 56969 --cookieDomain mtservices.com --userStoreDirMgr uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com --userStoreDirMgrPwd cangetindj --userStoreHost uds.mtservices.com --userStoreAdminPort 4344 --userStoreType LDAPv3ForOpenDS --userStorePort 4389 --userStoreRootSuffix ou=identities,dc=mtservices,dc=com
+    ```
+* Import AM configs:
+```
+Amster import
+```
+
+IG:
+=====================
+* Refer IG configs folder: /ig
       
    
         
