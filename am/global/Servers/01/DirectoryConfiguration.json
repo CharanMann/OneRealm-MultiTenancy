@@ -14,7 +14,8 @@
       "minConnectionPool" : 1,
       "maxConnectionPool" : 10,
       "bindDn" : "cn=Directory Manager",
-      "bindPassword" : null
+      "bindPassword" : null,
+      "bindPassword-encrypted" : "AAAAA0FFUwIQ/oCFO5kIXYKXpKkvziqC2YsW3YCkR9iz2owmOgnr1EMeJ0NjUI35vg=="
     },
     "directoryServers" : [ {
       "hostName" : "localhost",

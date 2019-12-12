@@ -3,11 +3,11 @@
     "realm" : "/tenants",
     "amsterVersion" : "6.5.2.2",
     "entityType" : "OAuth2ClientAgentGroups",
-    "entityId" : "tenant1-OAuthGr",
+    "entityId" : "tenant4-OAuthGr",
     "pathParams" : { }
   },
   "data" : {
-    "_id" : "tenant1-OAuthGr",
+    "_id" : "tenant4-OAuthGr",
     "signEncOAuth2ClientConfig" : {
       "idTokenEncryptionMethod" : "A128CBC-HS256",
       "jwkSet" : null,

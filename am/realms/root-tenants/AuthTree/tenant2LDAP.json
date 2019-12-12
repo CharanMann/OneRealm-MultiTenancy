@@ -1,0 +1,33 @@
+{
+  "metadata" : {
+    "realm" : "/tenants",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "tenant2LDAP",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "tenant2LDAP",
+    "nodes" : {
+      "2d782dde-7538-4d25-a338-9457f58d471a" : {
+        "displayName" : "Page Node",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "6ac2305b-2d8a-4b6a-8036-e789c1432714"
+        }
+      },
+      "6ac2305b-2d8a-4b6a-8036-e789c1432714" : {
+        "displayName" : "LDAP Decision",
+        "nodeType" : "LdapDecisionNode",
+        "connections" : {
+          "TRUE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "FALSE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "LOCKED" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "CANCELLED" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "EXPIRED" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      }
+    },
+    "entryNodeId" : "2d782dde-7538-4d25-a338-9457f58d471a"
+  }
+}

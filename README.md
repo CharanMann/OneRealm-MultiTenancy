@@ -36,9 +36,9 @@ AM:
 =====================
 * Refer AM configs folder: /am
 * Install AM:
-    ```
+```
 install-openam --serverUrl http://login.mtservices.com:8096/am --adminPwd cangetinam --policyAgentPwd camgetinag --acceptLicense --cfgDir /home/forgerock/am12 --cfgStoreAdminPort 9644 --cfgStoreJmxPort 9689 --cfgStorePort 56969 --cookieDomain mtservices.com --userStoreDirMgr uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com --userStoreDirMgrPwd cangetindj --userStoreHost uds.mtservices.com --userStoreAdminPort 4344 --userStoreType LDAPv3ForOpenDS --userStorePort 4389 --userStoreRootSuffix ou=identities,dc=mtservices,dc=com
-    ```
+```
 * Import AM configs:
 ```
 Amster import

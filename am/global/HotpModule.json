@@ -24,7 +24,8 @@
       "otpValidityDuration" : 5,
       "userProfileTelephoneAttribute" : "telephoneNumber",
       "smtpFromAddress" : "no-reply@openam.org",
-      "smtpUserPassword" : null
+      "smtpUserPassword" : null,
+      "smtpUserPassword-encrypted" : "AAAAA0FFUwIQCxRHK3zG1kA4n93NEY5l/Mm6xvY1VB43noLlvUGNfEXP6XupcSTBbw=="
     },
     "_type" : {
       "_id" : "hotp",

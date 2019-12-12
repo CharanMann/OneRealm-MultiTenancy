@@ -52,7 +52,8 @@
       "openam-idrepo-ldapv3-heartbeat-timeunit" : "SECONDS",
       "sun-idrepo-ldapv3-config-organization_name" : "dc=mtservices,dc=com",
       "sun-idrepo-ldapv3-config-connection-mode" : "LDAP",
-      "sun-idrepo-ldapv3-config-authpw" : null
+      "sun-idrepo-ldapv3-config-authpw" : null,
+      "sun-idrepo-ldapv3-config-authpw-encrypted" : "AAAAA0FFUwIQt1gu9pqV02h3PYqf6yQBfk8RF/U9JJFVZQqIOjwGnthrcslucpkT6g=="
     },
     "pluginconfig" : {
       "sunIdRepoSupportedOperations" : [ "realm=read,create,edit,delete,service", "group=read,create,edit,delete", "user=read,create,edit,delete,service" ],

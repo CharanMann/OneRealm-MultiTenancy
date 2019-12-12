@@ -14,6 +14,7 @@
       "authenticatorOATHDeviceSettingsEncryptionKeystore" : "/home/forgerock/am12/am/keystore.jks",
       "authenticatorOATHDeviceSettingsEncryptionKeystoreType" : "JKS",
       "authenticatorOATHDeviceSettingsEncryptionKeystorePassword" : null,
+      "authenticatorOATHDeviceSettingsEncryptionKeystorePassword-encrypted" : "AAAAA0FFUwIQH+0kM6LHM1PYVdpJuWnHgZipq9t+f96W0EgPmcKi20NxCptZcB/Gog==",
       "authenticatorOATHSkippableName" : "oath2faEnabled"
     },
     "_type" : {

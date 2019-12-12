@@ -2,12 +2,12 @@
   "metadata" : {
     "realm" : "/tenants",
     "amsterVersion" : "6.5.2.2",
-    "entityType" : "OAuth2ClientAgentGroups",
-    "entityId" : "tenant1-OAuthGr",
+    "entityType" : "OAuth2Clients",
+    "entityId" : "client1-t5",
     "pathParams" : { }
   },
   "data" : {
-    "_id" : "tenant1-OAuthGr",
+    "_id" : "client1-t5",
     "signEncOAuth2ClientConfig" : {
       "idTokenEncryptionMethod" : "A128CBC-HS256",
       "jwkSet" : null,
@@ -27,7 +27,7 @@
       "jwkStoreCacheMissCacheTime" : 60000,
       "idTokenSignedResponseAlg" : "RS256",
       "idTokenPublicEncryptionKey" : null,
-      "jwksUri" : "@SERVER_PROTO@://@SERVER_HOST@:@SERVER_PORT@@AM_SERVICES_DEPLOY_URI@/oauth2@REALM@/connect/jwk_uri",
+      "jwksUri" : "http://login.mtservices.com:8096/am/oauth2/tenants/connect/jwk_uri",
       "userinfoEncryptedResponseAlg" : null,
       "requestParameterSignedAlg" : null,
       "clientJwtPublicKey" : null
@@ -59,12 +59,15 @@
       "defaultMaxAgeEnabled" : false
     },
     "coreOAuth2ClientConfig" : {
+      "userpassword" : null,
+      "userpassword-encrypted" : "AAAAA0FFUwIQZfQSx4YzPjqFyjH6oXznefiHJb2MX3w4Ykh+0b1V5365nyBRZb8TnA==",
       "authorizationCodeLifetime" : 1200,
       "accessTokenLifetime" : 360000,
       "defaultScopes" : [ ],
       "clientName" : [ ],
       "clientType" : "Confidential",
       "scopes" : [ "openid", "profile", "mail", "employeeNumber" ],
+      "agentgroup" : "tenant5-OAuthGr",
       "refreshTokenLifetime" : 7200,
       "redirectionUris" : [ ],
       "status" : "Active"
