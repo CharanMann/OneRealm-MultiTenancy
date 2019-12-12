@@ -1,0 +1,17 @@
+{
+  "metadata" : {
+    "realm" : "/tenants",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "UsernameCollector",
+    "entityId" : "2df5a8b4-d82a-4dc9-9b85-6bb79fb2ccc3",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "2df5a8b4-d82a-4dc9-9b85-6bb79fb2ccc3",
+    "_type" : {
+      "_id" : "UsernameCollectorNode",
+      "name" : "Username Collector",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "realm" : "/tenants",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "LDAPDecision",
+    "entityId" : "0b66285c-72e9-4430-8f7f-0a5e3feae326",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "0b66285c-72e9-4430-8f7f-0a5e3feae326",
+    "heartbeatInterval" : 10,
+    "heartbeatTimeUnit" : "SECONDS",
+    "returnUserDn" : true,
+    "minimumPasswordLength" : 8,
+    "beheraEnabled" : true,
+    "searchScope" : "SUBTREE",
+    "ldapConnectionMode" : "LDAP",
+    "adminDn" : "uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com",
+    "trustAllServerCertificates" : false,
+    "secondaryServers" : [ ],
+    "accountSearchBaseDn" : [ "ou=People,o=tenant1,ou=identities,dc=mtservices,dc=com" ],
+    "userProfileAttribute" : "uid",
+    "userCreationAttrs" : [ ],
+    "primaryServers" : [ "uds.mtservices.com:4389" ],
+    "ldapOperationsTimeout" : 0,
+    "searchFilterAttributes" : [ "employeeNumber" ],
+    "adminPassword" : null,
+    "_type" : {
+      "_id" : "LdapDecisionNode",
+      "name" : "LDAP Decision",
+      "collection" : true
+    }
+  }
+}

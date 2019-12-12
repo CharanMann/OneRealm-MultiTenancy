@@ -1,0 +1,38 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "CertificateModule",
+    "entityId" : "CertificateModule",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "",
+    "defaults" : {
+      "matchCertificateInLdap" : false,
+      "certificateAttributeProfileMappingExtension" : "none",
+      "matchCertificateToCRL" : false,
+      "crlMatchingCertificateAttribute" : "CN",
+      "certificateLdapServers" : [ "uds.mtservices.com:4389" ],
+      "ldapCertificateAttribute" : "CN",
+      "updateCRLsFromDistributionPoint" : true,
+      "cacheCRLsInMemory" : true,
+      "crlHttpParameters" : "",
+      "authenticationLevel" : 0,
+      "certificateAttributeToProfileMapping" : "subject CN",
+      "ldapSearchStartDN" : [ ],
+      "userBindDN" : "uid=am-identity-bind-account,ou=admins,ou=identities,dc=mtservices,dc=com",
+      "trustedRemoteHosts" : [ "none" ],
+      "matchCACertificateToCRL" : false,
+      "iplanet-am-auth-cert-gw-cert-preferred" : false,
+      "ocspValidationEnabled" : false,
+      "sslEnabled" : false,
+      "clientCertificateHttpHeaderName" : ""
+    },
+    "_type" : {
+      "_id" : "certificate",
+      "name" : "Certificate",
+      "collection" : false
+    }
+  }
+}
