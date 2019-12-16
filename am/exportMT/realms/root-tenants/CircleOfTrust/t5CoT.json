@@ -1,0 +1,19 @@
+{
+  "metadata" : {
+    "realm" : "/tenants",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "CircleOfTrust",
+    "entityId" : "t5CoT",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "t5CoT",
+    "status" : "active",
+    "trustedProviders" : [ "http://login-t5.mtservices.com:8096/am|saml2" ],
+    "_type" : {
+      "_id" : "circlesoftrust",
+      "name" : "Circle of Trust",
+      "collection" : true
+    }
+  }
+}

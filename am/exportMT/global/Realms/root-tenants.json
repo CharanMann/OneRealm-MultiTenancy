@@ -1,0 +1,16 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "Realms",
+    "entityId" : "L3RlbmFudHM",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "L3RlbmFudHM",
+    "parentPath" : "/",
+    "active" : true,
+    "name" : "tenants",
+    "aliases" : [ "login-t4.mtservices.com", "login-t3.mtservices.com", "login-t5.mtservices.com", "login-t2.mtservices.com", "login-t1.mtservices.com" ]
+  }
+}

@@ -47,6 +47,16 @@ Amster import
 IG:
 =====================
 * Refer IG configs folder: /ig
+
+
+
+TESTS:
+=====================
+* SAML endpoints 
+http://am651.example.com:8086/am/saml2/jsp/idpSSOInit.jsp?spEntityID=http://login-t1.mtservices.com:8096/am&metaAlias= 	
+/employees/idp1&NameIDFormat=urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&binding=HTTP-POST&RelayState=http://login.mtservices.com:8096/am/XUI/?realm=/tenants#profile/details
+
+
       
    
         
