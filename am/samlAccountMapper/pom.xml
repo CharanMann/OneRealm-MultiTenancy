@@ -28,6 +28,7 @@
 
     <properties>
         <am.version>6.5.2.2</am.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
